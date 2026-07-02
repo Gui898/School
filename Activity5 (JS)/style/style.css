@@ -1,12 +1,21 @@
 @import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --main-color: #1a1818;
     --blue-color: #34c9bf;
+    --dark-blue: #021632;
     --gold-color: #e0b93a;
+    --card-color: #f7f7f7;
 
     --font-main-color: #f7f7f7;
-    --font-gold-color: #ff9100;
+    --font-black-color: #1e1c1c;
+
+    --font-main: "Montserrat", sans-serif;
+
+    --default-text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+    --internal-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 @font-face {
