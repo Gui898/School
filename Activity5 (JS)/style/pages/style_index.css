@@ -3,7 +3,6 @@
 body {
 
     background: var(--main-color);
-    overflow-x: hidden;
 }
 
 span{
@@ -122,19 +121,8 @@ header{
     z-index: -1;
 }
 
-@keyframes float {
-    
-    from { 
-        transform: translate(0,0) scale(1); 
-    }
-    
-    to { 
-        transform: translate(150px, -100px) scale(1.2); 
-    }
-}
-
 main {
-    width: 100vw;
+    width: 100%;
 }
 
 .hero{
@@ -206,7 +194,6 @@ main {
 }
 
 .second_section{
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -214,6 +201,11 @@ main {
     position: relative;
 
     height: 100vh;
+
+    animation: appear linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+    will-change: transform, opacity; 
 }
 
 .second_section h2{
@@ -282,6 +274,11 @@ main {
     align-items: center;
     padding: 1em 2em;
     margin-top: 5em;
+
+    animation: appear linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
+    will-change: transform, opacity; 
 }
 
 .third_section h2{
@@ -290,6 +287,19 @@ main {
     font-family: latin-font;
     line-height: 1.2em;
     color: var(--font-main-color);
+}
+
+.third_left{
+    animation: appear-left linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+}
+
+.right_cont{
+    animation: appear-right linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 40%;
+    will-change: transform, opacity; 
 }
 
 .third_right{
@@ -364,3 +374,49 @@ main {
     to{transform: translateX(-100%);}
 }
 
+@keyframes float {
+    
+    from { 
+        transform: translate(0,0) scale(1); 
+    }
+    
+    to { 
+        transform: translate(150px, -100px) scale(1.2); 
+    }
+}
+
+@keyframes appear {
+    from { 
+        opacity: 0;
+        transform: translateY(-200px); 
+    }
+    
+    to { 
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+@keyframes appear-left {
+    from { 
+        opacity: 0;
+        transform: translateX(-100vw); 
+    }
+    
+    to { 
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+@keyframes appear-right {
+    from { 
+        opacity: 0;
+        transform: translateX(200vw); 
+    }
+    
+    to { 
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
