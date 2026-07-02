@@ -1,13 +1,9 @@
 @import url('../main_hub.css');
 
 main{
-
-    flex:1;
+    
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-    gap:30px;
-    padding:40px;
 }
 
 .card{

@@ -57,6 +57,47 @@
 
         <main>
 
+            <h1>Insert a new Trip</h1>
+
+            <form class="travel-form">
+
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Osasco" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" placeholder="$ 0,00" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="date">Data</label>
+                    <input type="date" id="date" name="date" placeholder="01/01/2000" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="duration">Duration</label>
+                    <input type="text" id="duration" name="duration" placeholder="one week..." required>
+                </div>
+
+                <div class="input-group">
+                    <label for="image_icon">Icon Image</label>
+                    <input type="url" id="image_icon" name="image_icon" placeholder="https://...">
+                </div>
+
+                <div class="input-group">
+                    <label for="image_background">Background Image</label>
+                    <input type="url" id="image_background" name="image_background" placeholder="https://...">
+                </div>
+
+                <div class="input-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="5" placeholder="Osasco is a great place to visit because..."></textarea>
+                </div>
+
+                <button type="submit">Insert Trip</button>
+            </form>
         </main>
 
         <footer>

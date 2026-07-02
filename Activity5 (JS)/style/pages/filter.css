@@ -1,1 +1,105 @@
 @import url('../main_hub.css');
+
+main h1 {
+
+    color: var(--font-main-color);
+    
+    font-size: 7rem;
+
+    text-align: center;
+}
+
+.search-box{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.input-group{
+    flex: 1;
+    min-width: 200px;
+    margin-top: 2%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label{
+    color: var(--font-main-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.input-group input{
+    width: 80%;
+
+    padding: 15px 18px;
+
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+
+    color: white;
+    font-size: 1rem;
+
+    outline: none;
+
+    transition: .25s;
+}
+
+.input-group input::placeholder{
+    color: rgba(255,255,255,.55);
+}
+
+.input-group input:focus{
+    border-color: #4EA8DE;
+    box-shadow: 0 0 12px rgba(78,168,222,.35);
+}
+
+.input-group input[type="date"]{
+    color-scheme: dark;
+}
+
+.trips {
+
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+    padding:40px;
+}
+
+.card {
+
+    height:220px;
+    background:white;
+
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+    color:#222;
+
+    transition:.25s;
+}
+
+.card:hover {
+
+    transform:scale(1.05);
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+.card h2 {
+
+    font-size:30px;
+}

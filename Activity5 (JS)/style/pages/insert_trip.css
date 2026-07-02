@@ -1,1 +1,94 @@
 @import url('../main_hub.css');
+
+main {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+}
+
+main h1 {
+
+    color: var(--font-main-color);
+    
+    font-size: 7rem;
+}
+
+.travel-form{
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--card-color);
+}
+
+.input-group input,
+.input-group textarea{
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 12px;
+
+    background: transparent;
+    color: var(--card-color);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: .25s;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder{
+    color: rgba(255,255,255,.5);
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color: #4EA8DE;
+    box-shadow: 0 0 10px rgba(78,168,222,.35);
+}
+
+.input-group textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+
+.travel-form button{
+    padding: 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #4EA8DE;
+    color: var(--font-main-color);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.travel-form button:hover{
+    background: #2d89c5;
+    transform: translateY(-2px);
+}

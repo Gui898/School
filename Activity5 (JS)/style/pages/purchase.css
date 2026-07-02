@@ -1,1 +1,60 @@
 @import url('../main_hub.css');
+
+main h1 {
+
+    color: var(--font-main-color);
+    
+    font-size: 7rem;
+}
+
+.price {
+
+    display: flex;
+    gap: 5%;
+}
+
+#total {
+
+    color: var(--blue-color);
+
+    font-size: 5rem;
+}
+
+.trips {
+
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+    padding:40px;
+}
+
+.card {
+
+    height:220px;
+    background:white;
+
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+    color:#222;
+
+    transition:.25s;
+}
+
+.card:hover {
+
+    transform:scale(1.05);
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+.card h2 {
+
+    font-size:30px;
+}

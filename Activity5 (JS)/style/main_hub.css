@@ -55,6 +55,14 @@ nav{
     gap:20px;
 }
 
+main{
+
+    flex:1;
+
+    gap:30px;
+    padding:40px;
+}
+
 footer{
 
     background-color: var(--blue-color);
