@@ -1,0 +1,101 @@
+@import url('../style.css');
+
+body {
+
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+
+    font-family: 'rubik-font';
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sign{
+    width: 25%;
+    min-width: 380px;
+    background: rgb(201, 200, 200);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+    gap: 10%;
+}
+
+.sign form{
+    width: 100%;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sign h1{
+    font-size: 80px;
+    margin-bottom: 100px;
+    color: var(--font-black-color);
+}
+
+.sign label{
+    margin-bottom: 8px;
+    color: var(--dark-blue);
+    font-size: 15px;
+}
+
+.sign input{
+    height: 48px;
+
+    margin-bottom: 25px;
+    padding: 0 15px;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    transition: .2s;
+}
+
+.sign input:focus{
+    outline: none;
+    border-color: var(--main-color);
+}
+
+.sign button{
+    height: 48px;
+
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--main-color);
+    color: var(--font-main-color);
+
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.sign button:hover{
+    background: #333;
+}
+
+.video{
+    flex: 1;
+    overflow: hidden;
+}
+
+.video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
