@@ -52,3 +52,20 @@ window.addEventListener("mousemove", (e) => {
     }
   }
 });
+
+function leftBt(id){
+  const elem = document.getElementById(id);
+  elem.scrollTo({
+    left: elem.scrollLeft - 950,
+    behavior: "smooth"
+  });
+}
+
+function rightBt(id){
+  const elem = document.getElementById(id);
+  elem.scrollTo({
+    left: elem.scrollLeft + 950,
+    behavior: "smooth"
+  });
+}
+
