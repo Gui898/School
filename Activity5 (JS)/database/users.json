@@ -1,0 +1,13 @@
+{
+    "user": [
+        
+        {
+            "username": "Felipe",
+            "email": "lipebianchistefens@gmail.com",
+            "password": "Felipe123",
+
+            "favorites_trips_id": [1, 2, 3, 4],
+            "purchase_trips_id": [1, 2, 3]
+        }
+    ]
+}

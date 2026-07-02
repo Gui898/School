@@ -1,0 +1,17 @@
+{
+    "trip": [
+
+        {
+            "name": "Nome",
+            "price": 123,
+
+            "data": "01/01/2001",
+            "duration": "Meses",
+
+            "image_icon": "urlFodona",
+            "image_background": "urlFodona",
+
+            "description": "Essa é uma viajem do caralho"
+        }
+    ]
+}
