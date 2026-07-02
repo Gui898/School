@@ -1,0 +1,47 @@
+
+.image {
+
+    text-decoration:none;
+    color:white;
+
+    padding:10px 18px;
+    transition:.25s;
+}
+
+.image img {
+
+    width:40px;
+    transition:.2s;
+}
+
+.image:hover img {
+    width: 60px;
+}
+
+.home:hover img {
+    content:url("../../assets/icons/hover/home_hover.svg");
+}
+
+.buy:hover img{
+    content:url("../../assets/icons/hover/purchase_hover.svg");
+}
+
+.filter:hover img{
+    content:url("../../assets/icons/hover/search_hover.svg");
+}
+
+.favorites:hover img{
+    content:url("../../assets/icons/hover/star_hover.svg");
+}
+
+.insert:hover img{
+    content:url("../../assets/icons/hover/insert_trip_hover.svg");
+}
+
+.settings:hover img{
+    content:url("../../assets/icons/hover/configuration_hover.svg");
+}
+
+.logout:hover img{
+    content:url("../../assets/icons/hover/logout_hover.svg");
+}

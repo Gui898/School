@@ -16,7 +16,7 @@ main{
 }
 
 .sign{
-    width: 25%;
+    width: 40%;
     min-width: 380px;
     background: rgb(201, 200, 200);
 
@@ -39,7 +39,7 @@ main{
 
 .sign h1{
     font-size: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     color: var(--font-black-color);
 }
 
