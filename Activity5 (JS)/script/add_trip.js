@@ -45,7 +45,6 @@ function add_purchase_trip(user, id) {
             user.purchase_trip.push(id);
 
             hasUser = true;
-            break;
         }
     });
 
