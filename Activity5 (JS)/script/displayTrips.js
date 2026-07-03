@@ -5,6 +5,15 @@ const tripsData = JSON.parse(localStorage.getItem("trips_db"));
 
 const activeUserName = sessionStorage.getItem("user");
 
+function updateTotal(tripsArray) {
+
+    const total = tripsArray.reduce((sum, trip) => {
+        return sum + Number(trip.price);
+    }, 0);
+
+    document.getElementById("total").textContent = total.toFixed(2);
+}
+
 function displayPrchs() {
 
     classTripPrchs.innerHTML = "";
@@ -26,8 +35,9 @@ function displayPrchs() {
         purchasedIds.includes(trip.id_trip)
     );
 
-    console.log(currentUser.purchase_trip);
-    console.log(tripsData.trips);
+    createCard(purchasedTrips, classTripPrchs);
+    updateTotal(purchasedTrips);
+
     createCard(purchasedTrips, classTripPrchs);
 }
 
