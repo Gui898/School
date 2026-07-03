@@ -34,10 +34,82 @@ if (data && data.trips) {
         purchase.className = "action purchase";
         purchase.src = "../../assets/icons/not_hover/purchase.svg";
 
+        favorite.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            add_favorite_trip(trip.id_trip);
+        });
+
+        purchase.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            add_purchase_trip(trip.id_trip);
+        });
+
         actions.append(favorite, purchase);
 
         card.append(image, content, actions);
 
         main.appendChild(card);
     });
+}
+
+function add_favorite_trip(id) {
+
+    let localData = JSON.parse(localStorage.getItem("users_db"));
+
+    if(!localData){
+        alert("User not found");
+        throw new Error("User not found");
+    }
+
+    const username = sessionStorage.getItem("user");
+
+    hasUser = false;
+    localData.users.forEach(user => {
+            
+        if(user.username == username){
+                
+            user.favorite_trip.push(id);
+
+            hasUser = true;
+        }
+    });
+
+    if (!hasUser) {
+        alert("Incorrect username or password");
+        throw new Error("Incorrect username or password");
+    }
+
+    localStorage.setItem("users_db", JSON.stringify(localData, null, 2));
+}
+
+function add_purchase_trip(id) {
+
+    let localData = JSON.parse(localStorage.getItem("users_db"));
+
+    if(!localData){
+        alert("User not found");
+        throw new Error("User not found");
+    }
+
+    const username = sessionStorage.getItem("user");
+
+    hasUser = false;
+    localData.users.forEach(user => {
+            
+        if(user.username == username){
+                
+            user.purchase_trip.push(id);
+
+            hasUser = true;
+        }
+    });
+
+    if (!hasUser) {
+        alert("Incorrect username or password");
+        throw new Error("Incorrect username or password");
+    }
+
+    localStorage.setItem("users_db", JSON.stringify(localData, null, 2));
 }
