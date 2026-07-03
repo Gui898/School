@@ -13,6 +13,10 @@ main h1 {
     gap: 5%;
 }
 
+.text_total{
+    font-size: 5rem;
+}
+
 #total {
 
     color: var(--blue-color);
@@ -30,31 +34,18 @@ main h1 {
     padding:40px;
 }
 
-.card {
-
-    height:220px;
-    background:white;
-
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-decoration:none;
-    color:#222;
-
-    transition:.25s;
+.prch_bt{
+    background-color: var(--blue-color);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: 0.3s ease-in-out;
+    padding: 0 1rem;
 }
 
-.card:hover {
+.prch_bt:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
 
-    transform:scale(1.05);
-    box-shadow:0 10px 30px rgba(0,0,0,.18);
-}
-
-.card h2 {
-
-    font-size:30px;
 }

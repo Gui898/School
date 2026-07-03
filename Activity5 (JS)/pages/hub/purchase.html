@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="../../style/pages/purchase.css">
+        <link rel="stylesheet" href="../../style/card.css">
+        <script src="../../script/displayTrips.js" defer></script>
 
         <title>Purchase Trip</title>
     </head>
@@ -61,11 +63,11 @@
             
             <div class="price">
 
-                <h1 id="total">Price: Valor Altao</h1>
-                <button>Purchase the Trips</button>
+                <h1 class="text_total">Price: R$ <span id="total">2,00</span></h1>
+                <button class="prch_bt">Purchase the Trips</button>
             </div>
 
-            <div class="trips">
+            <div class="trips" id="id_trips_prchs">
 
                 <a href="trip.html" class="card">
                     <h2>Paris</h2>
