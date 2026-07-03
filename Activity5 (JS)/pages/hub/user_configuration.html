@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="../../style/pages/sign.css">
         <link rel="stylesheet" href="../../style/icons.css">
 
+        <script defer src="../../script/enter.js"></script>
+
         <title>User Configuration</title>
     </head>
     
@@ -47,9 +49,9 @@
                         <img src="../../assets/icons/not_hover/configuration.svg">
                     </a>
 
-                    <a href="../../index.html" class="image logout">
+                    <button onclick="delete_user(event)" class="image logout">
                         <img src="../../assets/icons/not_hover/logout.svg">
-                    </a>
+                    </button>
                 </div>
 
                 <form>
@@ -63,7 +65,7 @@
                     <label>Password</label>
                     <input type="password" id="password" name="password" placeholder="password" required>
 
-                    <button type="submit">Submit</button>
+                    <button class="submit" type="submit" onclick="update(event)">Submit</button>
                 </form>
             </section>
 

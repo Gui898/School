@@ -68,7 +68,7 @@ main{
     border-color: var(--main-color);
 }
 
-.sign button{
+.submit {
     height: 48px;
 
     margin-top: 15px;
@@ -85,7 +85,7 @@ main{
     transition: .2s;
 }
 
-.sign button:hover{
+.submit:hover {
     background: #333;
 }
 

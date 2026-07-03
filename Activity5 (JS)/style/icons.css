@@ -1,6 +1,9 @@
 
 .image {
 
+    background-color: transparent;
+    border: none;
+
     text-decoration:none;
     color:white;
 
@@ -14,11 +17,6 @@
     transition:.2s;
 }
 
-.logout {
-
-    background-color: transparent;
-    border: none;
-}
 
 .image:hover img {
     width: 60px;

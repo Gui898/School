@@ -8,7 +8,7 @@ if(!localData){
 const username = sessionStorage.getItem("user");
 
 hasUser = false;
-data.users.forEach(user => {
+localData.users.forEach(user => {
             
     if(user.username == username){
                 

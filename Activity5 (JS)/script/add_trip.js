@@ -10,7 +10,7 @@ function add_favorite_trip(user, id) {
     const username = sessionStorage.getItem("user");
 
     hasUser = false;
-    data.users.forEach(user => {
+    localData.users.forEach(user => {
             
         if(user.username == username){
                 
@@ -38,7 +38,7 @@ function add_purchase_trip(user, id) {
     const username = sessionStorage.getItem("user");
 
     hasUser = false;
-    data.users.forEach(user => {
+    localData.users.forEach(user => {
             
         if(user.username == username){
                 

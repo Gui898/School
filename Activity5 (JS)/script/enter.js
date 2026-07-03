@@ -73,3 +73,37 @@ function delete_user(event) {
     sessionStorage.removeItem("user");
     window.location.href = "../../index.html";
 }
+
+function update(event) {
+    event.preventDefault();
+
+    const username_ = document.getElementById("username").value;
+    const email_ = document.getElementById("email").value;
+    const password_ = document.getElementById("password").value;
+
+    let localData = JSON.parse(localStorage.getItem("users_db"));
+
+    if (!localData) {
+        alert("User not found");
+        throw new Error("User not found");
+    }
+
+    const old_username = sessionStorage.getItem("user");
+
+    localData.users.forEach(user => {
+
+        if (user.username == old_username) {
+
+            user.username = username_;
+            user.email = email_;
+            user.password = password_;
+
+            sessionStorage.setItem("user", username_);
+        }
+
+    });
+
+    localStorage.setItem("users_db", JSON.stringify(localData, null, 2));
+
+    alert("User updated!");
+}
