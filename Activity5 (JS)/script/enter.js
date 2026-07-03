@@ -8,7 +8,9 @@ function validateRegister(event){
     const obj = {
         username: username_,
         email: email_,
-        password: password_
+        password: password_,
+        favorite_trip: [],
+        purchase_trip: []
     };
 
     let localData = localStorage.getItem("users_db");
@@ -19,6 +21,8 @@ function validateRegister(event){
     const data = JSON.parse(localData);
 
     data.users.push(obj);
+
+    sessionStorage.setItem("user", obj.username)
     localStorage.setItem("users_db", JSON.stringify(data, null, 2));
 
     alert("The user was registered!");
@@ -44,17 +48,28 @@ function login(event){
 
     const data = JSON.parse(localData);
 
-    console.log("cuzao");
-
+    hasUser = false;
     data.users.forEach(user => {
-        console.log(user.username);
+        
         if(user.username == username_ && user.password == password_){
+            
+            sessionStorage.setItem("user", user.username)
             window.location.href = "../hub/store.html";
-        }else{
-            alert("Incorrect username or password");
-            throw new Error("Incorrect username or password");
+
+            hasUser = true;
         }
     });
 
+    if (!hasUser) {
+
+        alert("Incorrect username or password");
+        throw new Error("Incorrect username or password");
+    }
 }
 
+function delete_user(event) {
+    event.preventDefault();
+
+    sessionStorage.removeItem("user");
+    window.location.href = "../../index.html";
+}
