@@ -1,33 +1,40 @@
 const classTripPrchs = document.getElementById("id_trips_prchs");
-const classTripFav = document.getElementById("id_trips_fav");
 
-let localData = localStorage.getItem("users");
-let tripsData = localStorage.getItem("trips_db");
-let activeUserName = sessionStorage.getItem("user"); 
+const usersData = JSON.parse(localStorage.getItem("users_db"));
+const tripsData = JSON.parse(localStorage.getItem("trips_db"));
 
-const data = JSON.parse(localData);
-const tripsDb = JSON.parse(tripsData);
+const activeUserName = sessionStorage.getItem("user");
 
-function displayPcrhs(){
+function displayPrchs() {
+
     classTripPrchs.innerHTML = "";
 
-    if (!data || !tripsDb || !tripsDb.trips || !activeUserName) return;
+    if (!usersData || !tripsData) return;
 
-    const currentUser = data.find(user => user.username === activeUserName || user.name === activeUserName);
+    const currentUser = usersData.users.find(
+        user => user.username === activeUserName
+    );
 
     if (!currentUser) {
         classTripPrchs.innerHTML = "<p>Usuário não encontrado.</p>";
         return;
     }
 
-    const purchasedIds = currentUser.purchasedTrips || [];
+    const purchasedIds = currentUser.purchase_trip;
 
-    const purchasedTrips = tripsDb.trips.filter(trip => purchasedIds.includes(trip.id_trip));
+    const purchasedTrips = tripsData.trips.filter(trip =>
+        purchasedIds.includes(trip.id_trip)
+    );
 
+    console.log(currentUser.purchase_trip);
+    console.log(tripsData.trips);
     createCard(purchasedTrips, classTripPrchs);
 }
 
+displayPrchs();
+
 function createCard(tripsArray, classTrip){
+
     if (tripsArray && tripsArray.length > 0) {
         tripsArray.forEach(trip => {
             const card = document.createElement("a");
@@ -62,9 +69,10 @@ function createCard(tripsArray, classTrip){
             card.append(image, content, actions);
             classTrip.appendChild(card);
         });
-    } else {
+    } 
+    else {
         classTrip.innerHTML = "<p>Nenhuma viagem comprada encontrada.</p>";
     }
 }
 
-displayPcrhs();
+displayPrchs();
